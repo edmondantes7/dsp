@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Sublime. I've been using it for years and like the functionality and design
 
 --
 
@@ -89,6 +89,11 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+CMD + D = Finds other instances that match that selection
+CMD + Shift + J = Selects all child elements
+
+Ability to call git commands all from the palette.
+
+I've just done a few hightlighting customizations. 
 
  
