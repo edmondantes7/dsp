@@ -55,7 +55,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+-f - each name as a directory instead of as a file
+-m - comma seperated list
+-o - long list format, but without names
+-x - displays files as rows
+-1 - displays each entry as a line
 
 ---
 
@@ -63,7 +67,9 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+xargs is used to construct argument lists and invoke other utilities. It breaks the list of arguments into sublists small enough to be acceptable
+
+find /path -type f -print | xargs rm
 
  
 
