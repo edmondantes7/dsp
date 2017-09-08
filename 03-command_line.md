@@ -19,22 +19,35 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+show current working directory path   =  Echo $PWD
+
+creating a directory   = mkdir
+deleting a directory   = rmdir
+creating a file using touch command = touch test.py
+deleting a file   =  rm test.py
+renaming a file  = mv
+listing hidden files = ls -a
+copying a file from one directory to another cp dir1/file dir2
+
+locating a file = locate
+clearing the command line = clear
+converting one markdown format to another = pandoc
+
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
-`ls -t`  
-`ls -Glp`  
+`ls`     list files
+`ls -a`  lists all files including hidden files
+`ls -l`  long listing format
+`ls -lh` long list/human readable 
+`ls -lah`long list/all/human readable  
+`ls -t`  sorted by modification time
+`ls -Glp`Group information/long listing format  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+
 
 ---
 
