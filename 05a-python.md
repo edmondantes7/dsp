@@ -12,33 +12,46 @@ For quick and easy interactive practice with Python, many people enjoy [Codecade
 
 How are Python lists and tuples similar and different? Which will work as keys in dictionaries? Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Tuples – heterogenous. Fixed size
+List homogenous. Dynamic
 
----
+Lists can never be used as dictionaries because they are immutable. 
+
 
 ### Q2. Lists &amp; Sets
 
 How are Python lists and sets similar and different? Give examples of using both. How does performance compare between lists and sets for finding an element. Why?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Sets are faster in determining if an object is present, but slower than lists when iterating over their objects.
 
----
 
 ### Q3. Lambda Function
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+Lamda is an anonymous function. This function is flexible and is often used in combination with other functions. 
 
----
+a = ['app','tom','dick','har','jen','ken','chris','tim','tom','mel']
+c = sorted(a, key=lambda a: a)
+print(c)
+
 
 ### Q4. List Comprehension, Map &amp; Filter
 
 Explain list comprehensions. Give examples and show equivalents with `map` and `filter`. How do their capabilities compare? Also demonstrate set comprehensions and dictionary comprehensions.
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+List comprehension is used to construct lists in a very natural way. 
 
----
+List comprehension is a way to combine maps and filters into one statement. 
+
+nums = [2, 7, 5, 4, 16]
+## map and filter chained together 
+print map(lambda x: x*2, filter(lambda y: y % 2 == 0, nums))
+
+# equivalent version using list comprehension
+print [x*2 for x in nums if x % 2 == 0]
+
+
 
 ### Complete the following problems by editing the files below:
 
@@ -51,7 +64,7 @@ date_start = '01-02-2013'
 date_stop = '07-28-2015'
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+937
 
 b.  
 ```
@@ -59,7 +72,7 @@ date_start = '12312013'
 date_stop = '05282015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE (answer will be in number of days)
+513
 
 c.  
 ```
@@ -67,7 +80,7 @@ date_start = '15-Jan-1994'
 date_stop = '14-Jul-2015'  
 ```
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE  (answer will be in number of days)
+7850
 
 Place code in this file: [q5_datetime.py](python/q5_datetime.py)
 
