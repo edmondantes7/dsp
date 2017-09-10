@@ -3,131 +3,112 @@
 
 
 def donuts(count):
-    """
-    Given an int count of a number of donuts, return a string of the
-    form 'Number of donuts: <count>', where <count> is the number
-    passed in. However, if the count is 10 or more, then use the word
-    'many' instead of the actual count.
+	if count < 10:
+		print("Number of donuts: %r" % count)
+	else:
+		print("Number of donuts: many")
 
-    >>> donuts(4)
-    'Number of donuts: 4'
-    >>> donuts(9)
-    'Number of donuts: 9'
-    >>> donuts(10)
-    'Number of donuts: many'
-    >>> donuts(99)
-    'Number of donuts: many'
-    """
-    raise NotImplementedError
+
+list1 = [4, 11, 25, 3, 5]
+
+for i in range(0,5):
+	donuts(list1[i])
 
 
 def both_ends(s):
-    """
-    Given a string s, return a string made of the first 2 and the last
-    2 chars of the original string, so 'spring' yields 'spng'.
-    However, if the string length is less than 2, return instead the
-    empty string.
+	a = len(s)
+	if a > 2:
+		new = s[0]+s[1]+s[-2]+s[-1]
+	else:
+		new = ''
+	print(new)
 
-    >>> both_ends('spring')
-    'spng'
-    >>> both_ends('Hello')
-    'Helo'
-    >>> both_ends('a')
-    ''
-    >>> both_ends('xyz')
-    'xyyz'
-    """
-    raise NotImplementedError
+
+list2 = ['John', 'Spring', 're', 'Tom', 'jennifer', 'Bill', 'a']
+
+for i in range(0,7):
+	both_ends(list2[i])
 
 
 def fix_start(s):
-    """
-    Given a string s, return a string where all occurences of its
-    first char have been changed to '*', except do not change the
-    first char itself. e.g. 'babble' yields 'ba**le' Assume that the
-    string is length 1 or more.
-
-    >>> fix_start('babble')
-    'ba**le'
-    >>> fix_start('aardvark')
-    'a*rdv*rk'
-    >>> fix_start('google')
-    'goo*le'
-    >>> fix_start('donut')
-    'donut'
-    """
-    raise NotImplementedError
+ 	a = word[0]
+	print(type(a))
+	b = len(word)
+	for i in word:
+		if i == a:
+			word = word.replace(i, "*")
+	word = word.replace(word[0], a, 1)
+	print(word)		
+	return word
+	
+list3 = ['daddy', 'babble', 're', 'Tom', 'jennifer', 'Bill', 'a']
+for i in range(0,5,2):
+	fix_start(list3[i])
 
 
 def mix_up(a, b):
-    """
-    Given strings a and b, return a single string with a and b
-    separated by a space '<a> <b>', except swap the first 2 chars of
-    each string. Assume a and b are length 2 or more.
+	x = len(a)
+	y = len(b)
+	ss1 = a[-x:-x+2]
+	ss2 = b[-y:-y+2]
+	new1 = ss1 + b[2:]
+	new2 = ss2 + a[2:]
+	print(new2)
+	print(new1)
 
-    >>> mix_up('mix', 'pod')
-    'pox mid'
-    >>> mix_up('dog', 'dinner')
-    'dig donner'
-    >>> mix_up('gnash', 'sport')
-    'spash gnort'
-    >>> mix_up('pezzy', 'firm')
-    'fizzy perm'
-    """
-    raise NotImplementedError
+list4 = ['mix', 'pod', 'Dog', 'Dinner', 'gnash', 'sport']
+
+for i in range(0,5,2):
+	mix_up(list4[i], list4[i+1])
 
 
 def verbing(s):
-    """
-    Given a string, if its length is at least 3, add 'ing' to its end.
-    Unless it already ends in 'ing', in which case add 'ly' instead.
-    If the string length is less than 3, leave it unchanged. Return
-    the resulting string.
+	b = len(s)
+	if b > 3 and s[-3:] == 'ing':
+		s = s +'ly'
+		#s = s.replace('ing',"ly",1)
+	elif b > 3:
+		s = s +'ing'
+	else:
+		pass
+    print(s)
 
-    >>> verbing('hail')
-    'hailing'
-    >>> verbing('swiming')
-    'swimingly'
-    >>> verbing('do')
-    'do'
-    """
-    raise NotImplementedError
+list5 = ['hail', 'swimming', 'do']
+
+for i in range(0,3):
+	verbings(list5[i])
 
 
 def not_bad(s):
-    """
-    Given a string, find the first appearance of the substring 'not'
-    and 'bad'. If the 'bad' follows the 'not', replace the whole
-    'not'...'bad' substring with 'good'. Return the resulting string.
-    So 'This dinner is not that bad!' yields: 'This dinner is
-    good!'
+	b = s.find('bad')
+	c = s.find('not')
+	if (b == -1):
+		s = s 
+	elif (c < b): 
+		s = s.replace(s[c:],"good")
+    print(s)
 
-    >>> not_bad('This movie is not so bad')
-    'This movie is good'
-    >>> not_bad('This dinner is not that bad!')
-    'This dinner is good!'
-    >>> not_bad('This tea is not hot')
-    'This tea is not hot'
-    >>> not_bad("It's bad yet not")
-    "It's bad yet not"
-    """
-    raise NotImplementedError
+list6 = ['This movie is not so bad', 'This dinner is not that bad!','This tea is not hot', "It's bad not yet"]
+
+for i in range(0,4):
+	not_bad(list6[i])
 
 
 def front_back(a, b):
-    """
-    Consider dividing a string into two halves. If the length is even,
-    the front and back halves are the same length. If the length is
-    odd, we'll say that the extra char goes in the front half. e.g.
-    'abcde', the front half is 'abc', the back half 'de'. Given 2
-    strings, a and b, return a string of the form a-front + b-front +
-    a-back + b-back
+	c = len(a)
+	d = len(b)
+	if c%2 == 0:
+		c1 = c/2
+	else:
+		c1 = c/2 + 1
+	if d%2 == 0:
+		d1 = d/2
+	else:
+		d1 = d/2 + 1
+	new = a[:c1] + b[:d1] + a[c1:] + b[d1:]
+	print(new)
 
-    >>> front_back('abcd', 'xy')
-    'abxcdy'
-    >>> front_back('abcde', 'xyz')
-    'abcxydez'
-    >>> front_back('Kitten', 'Donut')
-    'KitDontenut'
-    """
-    raise NotImplementedError
+list7 = ['abcd','xy','abcde','xyz','Kitten','Donut']
+
+for i in range(0,6,2):
+	front_back(list7[i], list7[i+1])
