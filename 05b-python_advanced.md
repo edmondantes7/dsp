@@ -73,24 +73,9 @@ faculty_dict = { 'Ellenberg': [['Ph.D.', 'Professor', 'sellenbe@upenn.edu'], ['P
 ```
 Print the first 3 key and value pairs of the dictionary:
 
-test_dict = OrderedDict()
-matched_row = []
-last = []
-with open("faculty.csv", "r") as file:
-    # Read file as a CSV delimited by tabs.
-    reader = csv.reader(file, delimiter=',')
-    # This aspect strips the last names for matching purposes
-    for row in reader:
-    	new = row[0].split(' ') # Breaks up the names
-        matched_row.append(new) 
-        last.append(new[-1]) # Creates a list of last names only
-        b = len(last)
-        c = new[-1]
-        print(c)
-        if c in test_dict:
-            test_dict[c].append((row[1],row[2],row[3]))
-        else:
-            test_dict[c] = [(row[1],row[2],row[3])]
+('Bellamy', [(' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu')])
+('Bilker', [('Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu')])
+('Bryan', [(' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu')])
 
 #### Q7.  The previous dictionary does not have the best design for keys.  Create a new dictionary with keys as:
 
@@ -100,7 +85,9 @@ professor_dict = {('Susan', 'Ellenberg'): ['Ph.D.', 'Professor', 'sellenbe@upenn
 
 Print the first 3 key and value pairs of the dictionary:
 
->> REPLACE THIS WITH YOUR RESPONSE
+(('Bellamy', 'Scarlett'), [(' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu')])
+(('Bilker', 'Warren'), [('Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu')])
+(('Bryan', 'Matthew'), [(' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu')])
 
 #### Q8.  It looks like the current dictionary is printing by first name.  Print out the dictionary key value pairs based on alphabetical orders of the last name of the professors
 
