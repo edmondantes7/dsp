@@ -109,7 +109,7 @@ Print the first 3 key and value pairs of the dictionary:
 
 (('Bellamy', 'Scarlett'), [(' Sc.D.', 'Associate Professor of Biostatistics', 'bellamys@mail.med.upenn.edu')]) (('Bilker', 'Warren'), [('Ph.D.', 'Professor of Biostatistics', 'warren@upenn.edu')]) (('Bryan', 'Matthew'), [(' PhD', 'Assistant Professor of Biostatistics', 'bryanma@upenn.edu')])
 
-# * Note I used an ordered dictionary from the outset. 
+Note I used an ordered dictionary from the outset. 
 
 Place your code in this file: [advanced_python_dict.py](python/advanced_python_dict.py)
 
