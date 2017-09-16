@@ -19,13 +19,29 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 #### Q1. Find how many different degrees there are, and their frequencies: Ex:  PhD, ScD, MD, MPH, BSEd, MS, JD, etc.
 
->> REPLACE THIS WITH YOUR RESPONSE
+11
 
+matched_row = []
+matched_row2 = []
+matched_row3 = []
+with open("faculty.csv", "r") as file:
+    # Read file as a CSV delimited by tabs.
+    reader = csv.reader(file, delimiter=',')
+    for row in reader:
+        matched_row.append(row[3])
+        matched_row2.append(row[1])
+        matched_row3.append(row[2])
+
+c = Counter(matched_row2)
+d = Counter(matched_row3)
+print(c.items())
+print(d.items())
 
 #### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
->> REPLACE THIS WITH YOUR RESPONSE
+4
 
+Same code as above
 
 #### Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
