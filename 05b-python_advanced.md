@@ -21,43 +21,53 @@ This data is available in this file:  [faculty.csv](python/faculty.csv)
 
 11
 
-matched_row = []
-matched_row2 = []
-matched_row3 = []
-with open("faculty.csv", "r") as file:
-    # Read file as a CSV delimited by tabs.
-    reader = csv.reader(file, delimiter=',')
-    for row in reader:
-        matched_row.append(row[3])
-        matched_row2.append(row[1])
-        matched_row3.append(row[2])
-
-c = Counter(matched_row2)
-d = Counter(matched_row3)
-print(c.items())
-print(d.items())
-
 #### Q2. Find how many different titles there are, and their frequencies:  Ex:  Assistant Professor, Professor
 
 4
 
-Same code as above
-
 #### Q3. Search for email addresses and put them in a list.  Print the list of email addresses.
 
-matched_row = []
-with open("faculty.csv", "r") as file:
-    # Read file as a CSV delimited by tabs.
-    reader = csv.reader(file, delimiter=',')
-    for row in reader:
-        matched_row.append(row[3])
-
-print(matched_row)
-
+bellamys@mail.med.upenn.edu
+warren@upenn.edu
+bryanma@upenn.edu
+jinboche@upenn.edu
+sellenbe@upenn.edu
+jellenbe@mail.med.upenn.edu
+ruifeng@upenn.edu
+bcfrench@mail.med.upenn.edu
+pgimotty@upenn.edu
+wguo@mail.med.upenn.edu
+hsu9@mail.med.upenn.edu
+rhubb@mail.med.upenn.edu
+whwang@mail.med.upenn.edu
+mjoffe@mail.med.upenn.edu
+jrlandis@mail.med.upenn.edu
+liy3@email.chop.edu
+mingyao@mail.med.upenn.edu
+hongzhe@upenn.edu
+rlocalio@upenn.edu
+nanditam@mail.med.upenn.edu
+knashawn@mail.med.upenn.edu
+propert@mail.med.upenn.edu
+mputt@mail.med.upenn.edu
+sratclif@upenn.edu
+michross@upenn.edu
+jaroy@mail.med.upenn.edu
+msammel@cceb.med.upenn.edu
+shawp@upenn.edu
+rshi@mail.med.upenn.edu
+hshou@mail.med.upenn.edu
+jshults@mail.med.upenn.edu
+alisaste@mail.med.upenn.edu
+atroxel@mail.med.upenn.edu
+rxiao@mail.med.upenn.edu
+sxie@mail.med.upenn.edu
+dxie@upenn.edu
+weiyang@mail.med.upenn.edu
 
 #### Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
->> REPLACE THIS WITH YOUR RESPONSE
+5
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
