@@ -67,7 +67,7 @@ weiyang@mail.med.upenn.edu
 
 #### Q4. Find how many different email domains there are (Ex:  mail.med.upenn.edu, upenn.edu, email.chop.edu, etc.).  Print the list of unique email domains.
 
-5
+4
 
 Place your code in this file: [advanced_python_regex.py](python/advanced_python_regex.py)
 
