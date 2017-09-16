@@ -3,10 +3,15 @@
 
 
 def match_ends(words):
-    """
-    Given a list of strings, return the count of the number of strings
-    where the string length is 2 or more and the first and last chars
-    of the string are the same.
+  	counter = 0
+	for word in list1:
+		a = len(word)
+		#print(a)
+		if a >= 2 and (word[0] == word[-1]):
+			counter = counter + 1
+		else:
+			pass
+	return counter		
 
     >>> match_ends(['aba', 'xyz', 'aa', 'x', 'bbb'])
     3
@@ -19,11 +24,13 @@ def match_ends(words):
 
 
 def front_x(words):
-    """
-    Given a list of strings, return a list with the strings in sorted
-    order, except group all the strings that begin with 'x' first.
-    e.g. ['mix', 'xyz', 'apple', 'xanadu', 'aardvark'] yields
-         ['xanadu', 'xyz', 'aardvark', 'apple', 'mix'].
+    y = sorted(words, key=lambda z:(z[0]!='x', z))
+    return y
+
+words = ['mix','xyz','apple','xanadu','aardvark']
+front_x(words)
+print(b)
+   
 
     >>> front_x(['bbb', 'ccc', 'axx', 'xzz', 'xaa'])
     ['xaa', 'xzz', 'axx', 'bbb', 'ccc']
@@ -36,11 +43,8 @@ def front_x(words):
 
 
 def sort_last(tuples):
-    """
-    Given a list of non-empty tuples, return a list sorted in
-    increasing order by the last element in each tuple.
-    e.g. [(1, 7), (1, 3), (3, 4, 5), (2, 2)] yields
-         [(2, 2), (1, 3), (3, 4, 5), (1, 7)].
+    y = sorted(tuples, key=lambda x:x[-1])
+	print(y)
 
     >>> sort_last([(1, 3), (3, 2), (2, 1)])
     [(2, 1), (3, 2), (1, 3)]
@@ -53,11 +57,16 @@ def sort_last(tuples):
 
 
 def remove_adjacent(nums):
-    """
-    Given a list of numbers, return a list where all adjacent equal
-    elements have been reduced to a single element, so [1, 2, 2, 3]
-    returns [1, 2, 3]. You may create a new list or modify the passed
-    in list.
+    a = len(nums)
+	print(a)
+	i = 1
+	while i < a:
+		if nums[i] == nums[i-1]:
+			nums.pop(i)
+			a -= 1
+		else:
+			i += 1	
+	print(nums)
 
     >>> remove_adjacent([1, 2, 2, 3])
     [1, 2, 3]
@@ -72,11 +81,24 @@ def remove_adjacent(nums):
 
 
 def linear_merge(list1, list2):
-    """
-    Given two lists sorted in increasing order, create and return a
-    merged list of all the elements in sorted order. You may modify
-    the passed in lists. Ideally, the solution should work in "linear"
-    time, making a single pass of both lists.
+  	result = []
+	i = j = 0
+	total = len(list1) + len(list2)
+	while len(result) != total:
+		if len(list1) == i:
+			result += list2[j:]
+			break
+		elif len(list2) == j:
+			result += list1[i:]
+			break
+		elif list1[i] < list2[j]:
+			result.append(list1[i])
+			i += 1
+		else:
+			result.append(list2[j])
+			j += 1
+	print result
+	return result
 
     >>> linear_merge(['aa', 'xx', 'zz'], ['bb', 'cc'])
     ['aa', 'bb', 'cc', 'xx', 'zz']
